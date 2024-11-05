@@ -1,0 +1,272 @@
+.logo {
+  width: 6.5625rem;
+  justify-items: center;
+  margin: auto;
+}
+
+.background {
+  background-color: var(--gray-300);
+  height: 10.8125rem;
+}
+
+.create-task {
+  justify-content: center;
+  position: absolute;
+  justify-self: center;
+  margin-top: 8.875rem;
+  gap: 0.5rem;
+}
+
+#new-task {
+  height: 3.25rem;
+  width: 16.6875rem;
+  padding: 1.125rem;
+  border-radius: 0.5rem;
+  border: solid 1px var(--gray-300);
+  font: var(--font-input);
+}
+
+#new-task:focus {
+  outline-width: 0;
+  border: solid 2px #9359f3;
+}
+
+.btn-create {
+  background-color: var(--purple-dark);
+  border-radius: 0.5rem;
+  border: none;
+  width: 3.5rem;
+  cursor: pointer;
+
+  & img {
+    vertical-align: middle;
+  }
+}
+
+.btn-create:hover {
+  background-color: var(--purple-base);
+}
+
+main {
+  justify-content: center;
+  margin-top: 3.4375rem;
+
+  .info {
+    justify-content: space-between;
+    color: #6b6572;
+    font: var(--subtitle);
+    width: 20.4375rem;
+
+    & span {
+      margin-left: 0.25rem;
+      border-radius: 62.4375rem;
+      padding-inline: 0.5rem;
+      padding-block: 0.25rem;
+      font: var(--font-tag);
+    }
+
+    .created span {
+      background-color: var(--purple-light);
+      color: var(--purple-dark);
+    }
+
+    .done span {
+      background-color: var(--green-light);
+      color: var(--green-dark);
+    }
+  }
+
+  .empty {
+    margin-top: 1.25rem;
+    border-top: solid 1px #e0dce4;
+    padding: 2.5rem 1.5rem;
+
+    & img {
+      margin-bottom: 1rem;
+    }
+
+    #menssage {
+      display: grid;
+      row-gap: 0.25rem;
+    }
+
+    & p {
+      font: var(--text-md);
+      color: #6b6572;
+    }
+
+    #no-task {
+      font: var(--subtitle);
+    }
+  }
+
+  #tasks {
+    margin-top: 1.5rem;
+    width: 20.4375rem;
+    display: grid;
+    row-gap: 0.75rem;
+  }
+
+  .task {
+    cursor: pointer;
+    min-height: 3.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    background-color: #e0dce4;
+    border: 1px #d1cbd7;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font: var(--text-sm);
+    color: #262428;
+    position: relative;
+  }
+
+  .check-image {
+    background-image: url(../assets/circle-default.svg);
+
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .delete-image {
+    background-image: url(../assets/delete-default.svg);
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .task:hover {
+    background-color: #e5e2e9;
+
+    & .check-image {
+      background-image: url(../assets/circle-hover.svg);
+      background-repeat: no-repeat;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  & input,
+  & input:focus,
+  & input:hover {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  .task input {
+    opacity: calc(0);
+  }
+
+  .content {
+    margin-left: 1.75rem;
+    width: 15.1875rem;
+  }
+
+  .task:has(:checked) {
+    text-decoration: line-through;
+    color: #6b6572;
+    position: relative;
+
+    & .check-image {
+      background-image: url(../assets/check-default.svg);
+    }
+
+    &:hover .check-image {
+      background-image: url(../assets/check-hover.svg);
+      background-color: #e5e2e9;
+    }
+  }
+
+  .delete-image:hover {
+    background-image: url(../assets/delete-hover.svg);
+  }
+}
+
+@media (width >= 80em) {
+  .logo {
+    width: 8.75rem;
+  }
+
+  .background {
+    background-color: var(--gray-300);
+    height: 12.5rem;
+  }
+
+  .create-task {
+    margin-top: 10.8125rem;
+  }
+
+  #new-task {
+    width: 38.625rem;
+  }
+
+  .btn-create {
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: center;
+    width: 6.875rem;
+    gap: 0.5rem;
+    font: var(--text-button);
+  }
+
+  .btn-create:before {
+    content: "Criar";
+    color: #f0edf2;
+    font-weight: 600;
+  }
+
+  main {
+    .info {
+      width: 46rem;
+    }
+
+    .empty {
+      margin-top: 1.5rem;
+      padding: 4rem 1.5rem;
+    }
+
+    #tasks {
+      width: 46rem;
+    }
+
+    .task {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      background-color: #e0dce4;
+      border: 1px #d1cbd7;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font: var(--text-md);
+      color: #262428;
+    }
+
+    .delete-image,
+    .check-image {
+      top: 1rem;
+    }
+
+    .delete-image {
+      right: 1rem;
+    }
+
+    .check-image {
+      left: 1rem;
+    }
+
+    .content {
+      width: 39.75rem;
+    }
+  }
+}

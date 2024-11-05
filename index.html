@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="background grid">
+      <img class="logo" src="assets/logo.svg" alt="logo da todo" />
+      <form class="create-task flex">
+        <input
+          name="new-task"
+          id="new-task"
+          required
+          type="text"
+          placeholder="Adicione uma nova tarefa"
+        />
+        <button class="btn-create" type="submit">
+          <img src="assets/create.svg" alt="Ícone de adicionar" />
+        </button>
+      </form>
+    </div>
+
+    <main class="grid">
+      <div class="info flex">
+        <p class="created">Tarefas criadas <span id="createdTasks">0</span></p>
+        <p class="done">Concluídas <span id="numberDone">0</span></p>
+      </div>
+      <div class="empty text-center">
+        <img src="assets/list.svg" alt="ícone de uma lista de tarefas." />
+        <br />
+        <div id="menssage">
+          <p id="no-task">Você ainda não tem tarefas cadastradas</p>
+          <p>Crie tarefas e organize seus itens a fazer</p>
+        </div>
+      </div>
+      <ul id="tasks"></ul>
+    </main>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
