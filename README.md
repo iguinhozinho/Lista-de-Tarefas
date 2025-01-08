@@ -30,10 +30,6 @@ O **Lista de Tarefas ToDo** é uma aplicação web que permite organizar suas ta
 - **CSS** - Estilização e layout responsivo
 - **JavaScript** - Lógica de criação, exclusão e conclusão de tarefas
 
-## Captura de Tela
-
-![Captura de Tela da Aplicação](https://github-production-user-asset-6210df.s3.amazonaws.com/125235607/384660158-f2841545-4d79-4e51-9891-57822b97b5e8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241110%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241110T044153Z&X-Amz-Expires=300&X-Amz-Signature=d61ff45d8c50985a7f5ec9c74bdb5ddd3e88ce2844450b2ec4213a56634ab7b8&X-Amz-SignedHeaders=host)
-
 ## Como Usar
 
 1. Clone o repositório:
